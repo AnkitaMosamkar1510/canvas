@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+      <a class="btn" href="{{ url_for('.list') }}">&lt; Back</a>
+      <div id="status" class="status">✔ Saved</div>
+      <input id="title" class="title" placeholder="Title" value="{{ title or '' }}">
+      <textarea id="text" autofocus placeholder="Write some notes...">{{ text }}</textarea>
+      <div id="panel" class="panel"></div>
+{%- endblock %}

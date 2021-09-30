@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+      {%- with messages = get_flashed_messages(with_categories=True) %}
+      {%- if messages %}
+      {%- for category, message in messages %}
+      <div>{{ message }}</div>
+      {%- endfor %}
+      {%- endif %}
+      {%- endwith %}
+      <button id="add-btn" class="btn add">New note</button>
+      <div id="new-listing" class="listing hidden">
+        <form method="POST">
+          <span class="listing-date">{{ today().strftime('%m/%d') }}</span>
+          <input id="new-title" class="new-title title" name="title" type="text" placeholder="Title">
+        </form>
+      </div>
+      {%- for fname, title, date in files %}
+      <div class="listing">
+        <span class="listing-date">{{ date.strftime('%m/%d') }}</span>
+        <a href="{{ url_for('.edit', fname=fname) }}" class="listing-title">{{ title or 'Untitled' }}</a>
+      </div>
+      {%- endfor %}
+{%- endblock %}

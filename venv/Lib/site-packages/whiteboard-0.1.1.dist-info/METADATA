@@ -1,0 +1,51 @@
+Metadata-Version: 2.0
+Name: whiteboard
+Version: 0.1.1
+Summary: Take math notes in your browser
+Home-page: https://github.com/nickfrostatx/whiteboard
+Author: Nick Frost
+Author-email: nickfrostatx@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Flask
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Text Editors
+Requires-Dist: Flask (>=0.9)
+Requires-Dist: Werkzeug (>=0.7)
+Requires-Dist: click (>=2.0)
+
+Whiteboard
+==========
+
+.. image:: https://travis-ci.org/nickfrostatx/whiteboard.svg?branch=master
+    :target: https://travis-ci.org/nickfrostatx/whiteboard?branch=master
+
+.. image:: https://coveralls.io/repos/github/nickfrostatx/whiteboard/badge.svg?branch=master
+    :target: https://coveralls.io/github/nickfrostatx/whiteboard?branch=master
+
+.. image:: https://img.shields.io/pypi/v/whiteboard.svg
+    :target: https://pypi.python.org/pypi/whiteboard
+
+.. image:: https://img.shields.io/badge/license-MIT-blue.svg
+    :target: https://raw.githubusercontent.com/nickfrostatx/whiteboard/master/LICENSE
+
+I'm tired of copying ¬ and ∉ in vim to take notes, so I'll make an editor.
+
+Installation
+------------
+
+.. code-block:: bash
+
+    $ pip install whiteboard
+
+Usage
+-----
+
+.. code-block:: bash
+
+    $ whiteboard /path/to/notes/dir --port 8080 --host 0.0.0.0
+
+
